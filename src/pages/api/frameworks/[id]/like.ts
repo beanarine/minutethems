@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ params, redirect }) => {
     if (updateError) {
       console.error(updateError);
     }
-    return redirect(`/frameworks/${framework.id}`, 303);
+    return redirect(`/`, 303);
   }
 
   return new Response("No supabase url provided", { status: 400 });
