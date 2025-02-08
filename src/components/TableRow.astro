@@ -19,4 +19,9 @@ const { framework } = Astro.props;
   </td>
   <td>{framework.likes} like{framework.likes === 1 ? "" : "s"}</td>
   <td><a href={`/frameworks/${framework.id}`} class="underline">Learn more &rarr;</a></td>
+  <td>
+    <form action={`/api/frameworks/${framework?.id}/like`} method="post">
+      <button type="submit" class="px-4 py-2 bg-green-500 rounded-sm text-neutral-800 hover:bg-green-600">Like</button>
+    </form>
+  </td>
 </tr>
